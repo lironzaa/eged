@@ -1,1 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+@import "colors";
+@import "ngx-toastr/toastr";
+@import 'bootstrap/scss/bootstrap';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// Backgrounds
+
+.app-bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-light-gray {
+  background-color: var(--light-gray-color);
+}
+
+// Text
+
+html {
+  font-size: 1rem !important;
+}
+
+.text-lg {
+  font-size: 1.5rem !important;
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+  html {
+    font-size: 0.8rem !important;
+  }
+
+  .text-lg {
+    font-size: 1.4rem !important;
+  }
+}
+
+.primary-text {
+  color: var(--primary-color);
+}
+
+// General css
+
+.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.white-circle {
+  background-color: var(--white-color);
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.green-circle {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.card {
+  border: 1px solid var(--light-gray-color);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.card p {
+  margin: 0.5rem 0;
+}
+
+.card strong {
+  font-weight: bold;
+}
+
+.hr-primary-color {
+  border: 1px solid var(--primary-color);
+}

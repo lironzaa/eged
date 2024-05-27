@@ -1,0 +1,40 @@
+<div class="row my-2" *ngIf="!isXs">
+  <div class="col-12 d-flex align-items-center">
+    <div class="details-container">
+      <app-circle [text]="'✓'" [color]="'white'" [dynamicClass]="'ms-2'" />
+      <span class="fw-bold">סוג כרטיס, מוצא ויעד</span>
+    </div>
+    <hr class="header-hr flex-grow-1">
+    <div class="details-container">
+      <app-circle [text]="'✓'" [color]="'white'" [dynamicClass]="'ms-2'" />
+      <span class="fw-bold">נוסעים</span>
+    </div>
+    <hr class="header-hr flex-grow-1">
+    <div class="details-container">
+      <app-circle [text]="'✓'" [color]="'white'" [dynamicClass]="'ms-2'" />
+      <span class="fw-bold">מועד הקו</span>
+    </div>
+    <hr class="header-hr flex-grow-1">
+    <div class="details-container">
+      <app-circle [text]="'4'" [color]="'green'" [dynamicClass]="'ms-2'" />
+      <span class="fw-bold">סיכום ותשלום</span>
+    </div>
+  </div>
+</div>
+<div class="row my-2" *ngIf="isXs">
+  <div class="col-12 d-flex mb-1">
+    <app-circle [text]="'✓'" [color]="'white'" />
+    <hr class="header-hr flex-grow-1">
+    <app-circle [text]="'✓'" [color]="'white'" />
+    <hr class="header-hr flex-grow-1">
+    <app-circle [text]="'✓'" [color]="'white'" />
+    <hr class="header-hr flex-grow-1">
+    <app-circle [text]="'✓'" [color]="'white'" />
+  </div>
+  <div class="col-12 d-flex justify-content-between">
+    <span class="fw-bold">סוג, מוצא ויעד</span>
+    <span class="fw-bold">הנוסעים</span>
+    <span class="fw-bold">מועד הקו</span>
+    <span class="fw-bold">סיכום ותשלום</span>
+  </div>
+</div>

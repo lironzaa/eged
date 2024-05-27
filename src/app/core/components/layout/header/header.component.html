@@ -1,0 +1,23 @@
+<header>
+  <div class="header-container py-3 app-bg-primary">
+    <a [routerLink]="['/users']" class="home-item nav-item">
+      <span class="pl-1 pr-3">Eged</span>
+    </a>
+    <a [routerLink]="['/users']" class="nav-item" [routerLinkActive]="['is-active']"
+       [routerLinkActiveOptions]="routerLinkActiveOptions">
+      <span class="pr-3">Users</span>
+    </a>
+    <a [routerLink]="['users/search-user']" class="nav-item" [routerLinkActive]="['is-active']"
+       [routerLinkActiveOptions]="routerLinkActiveOptions">
+      <span class="pr-3">Search user</span>
+    </a>
+    <a [routerLink]="['currency']" class="nav-item" [routerLinkActive]="['is-active']"
+       [routerLinkActiveOptions]="routerLinkActiveOptions">
+      <span class="pr-3">Currency</span>
+    </a>
+    <a [routerLink]="['tickets']" class="nav-item" [routerLinkActive]="['is-active']"
+       [routerLinkActiveOptions]="routerLinkActiveOptions">
+      <span class="pr-3">Tickets</span>
+    </a>
+  </div>
+</header>

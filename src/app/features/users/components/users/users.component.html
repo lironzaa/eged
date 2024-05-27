@@ -1,0 +1,19 @@
+<div class="p-3" *ngIf="usersState$ | async; let usersState">
+  <app-data-table
+    [dataTableConfig]="tableConfig"
+    [items]="usersState.users"
+    [isLoading]="usersState.isLoading"
+    [isPointer]="true"
+    (tableRowClicked)="onTableRowClick($event)"
+  />
+</div>
+
+<app-dynamic-modal #dynamicModal [title]="selectedUser?.name + ' Todos'">
+  <ng-container modal-body>
+    <ng-container *ngIf="selectedUser">
+      <app-user-todos
+        [userTodos]="selectedUser.usersTodos"
+      />
+    </ng-container>
+  </ng-container>
+</app-dynamic-modal>

@@ -1,0 +1,27 @@
+<div *ngIf="paginationData$ | async; let paginationData" class="pagination-container">
+  <div class="d-flex mb-2">
+    <app-button
+      [text]="'Previous'"
+      [color]="'btn-primary'"
+      [type]="'button'"
+      [isDisabled]="!paginationData.hasPreviousPage"
+      (buttonClicked)="navigateToPage('previousPage')"
+    />
+    <div class="current-page-div">
+      <p class="current-page">{{ page }}</p>
+    </div>
+    <app-button
+      [text]="'Next'"
+      [color]="'btn-primary'"
+      [type]="'button'"
+      [isDisabled]="!paginationData.hasNextPage"
+      (buttonClicked)="navigateToPage('nextPage')"
+    />
+  </div>
+  <div>
+    <span>Showing
+      <span *ngIf="paginationData.hasNextPage">{{ paginationData.itemsPerPage * paginationData.currentPage }}</span>
+      <span *ngIf="!paginationData.hasNextPage">{{ paginationData.itemsCount }}</span>
+      of {{ paginationData.itemsCount }} results</span>
+  </div>
+</div>

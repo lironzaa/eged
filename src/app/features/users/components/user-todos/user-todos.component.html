@@ -1,0 +1,4 @@
+<p *ngFor="let todo of userTodos; trackBy: trackByTodoId"
+   [ngClass]="todo.completed ? 'app-bg-primary' : 'bg-danger'">
+  <span class="fw-bold">{{ todo.id }}</span>: {{ todo.title }}
+</p>

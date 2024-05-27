@@ -1,0 +1,42 @@
+<div class="container" dir="rtl">
+  <app-ride-header />
+
+  <div class="row mb-3">
+    <div class="col-12 d-flex justify-content-between">
+      <div></div>
+      <div class="primary-text fw-bold text-lg">סיכום ותשלום</div>
+      <div class="timing">🕑 09:15</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <app-ride-details
+          [rideType]="'הלוך'"
+          [rideDate]="'22/05/2022 10:30'"
+          [busNumber]="394"
+          [numberOfSeats]="3"
+          [location]="'תל אביב'"
+          [destination]="'אילת'"
+          [locationAddress]="'תחנה מרכזית תל אביב'"
+          [destinationAddress]="'אילת איזור תעשיה'"
+          [dynamicClass]="'mb-3'"
+          [isDisplayHr]="true"
+        />
+        <app-ride-details
+          [rideType]="'חזור'"
+          [rideDate]="'25/05/2022 12:00'"
+          [busNumber]="390"
+          [numberOfSeats]="3"
+          [location]="'אילת'"
+          [destination]="'תל אביב'"
+          [locationAddress]="'אילת איזור תעשיה'"
+          [destinationAddress]="'תחנה מרכזית תל אביב'"
+        />
+      </div>
+    </div>
+  </div>
+
+  <app-ride-summary />
+</div>
